@@ -1,0 +1,18 @@
+@import 'abstract/mixins';
+@import 'abstract/typography';
+@import 'abstract/variables';
+@import 'abstract/base';
+
+@import 'components/header.scss';
+@import 'components/cookies.scss';
+@import 'components/phone.scss';
+@import 'components/contacts.scss';
+@import 'components/about.scss';
+@import 'components/verification.scss';
+@import 'components/tools.scss';
+@import 'components/qr-code.scss';
+@import 'components/generate.scss';
+@import 'components/order.scss';
+@import 'components/divider.scss';
+@import 'components/form.scss';
+@import 'components/footer.scss';

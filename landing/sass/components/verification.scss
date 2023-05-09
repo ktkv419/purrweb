@@ -1,0 +1,77 @@
+.verification {
+  grid-column: center-start / center-end;
+  grid-row: 5/6;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 35dvh;
+
+  &__image {
+    @include section-gap;
+    height: 65dvh;
+    position: static;
+    grid-column: full-start / full-end;
+    grid-row: 4/5;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(255, 255, 255, 0.05) 30%,
+        rgba(255, 255, 255, 0.05) 70%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      url('../../img/verification-bg.png');
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10rem;
+  }
+
+  &__content {
+    grid-column: center-start / center-end;
+    min-height: 30dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 5/6;
+
+    .phone {
+      transform: translateY(-25%);
+      width: 100%;
+      &:not(:last-child) {
+        margin-right: 5rem;
+      }
+    }
+  }
+
+  @media all and (max-width: 56.25em) {
+    padding: 0 2rem;
+    &__image {
+      height: 30dvh;
+    }
+    &__content {
+      flex-direction: column;
+      gap: 10rem;
+    }
+
+    &__text {
+      margin-left: unset;
+      order: -2;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .phone {
+      width: 70vw;
+      height: 100%;
+      margin-right: unset !important;
+      transform: translateY(0);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.phone {
+  width: 30rem;
+  aspect-ratio: 1/2;
+  position: relative;
+  pointer-events: none;
+  // filter: drop-shadow(0 1rem 2rem rgba(255, 255, 255, 0.3));
+
+  &__bezels,
+  &__screen {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__screen {
+    z-index: 3;
+    object-fit: contain;
+    height: 100%;
+  }
+
+  &__bezels {
+    z-index: 4;
+  }
+
+  .about & {
+    filter: drop-shadow(0 1rem 2rem rgba(255, 255, 255, 0.3));
+  }
+}

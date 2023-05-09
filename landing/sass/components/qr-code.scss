@@ -1,0 +1,119 @@
+.qr-code {
+  grid-column: full-start / full-end;
+  @include section-gap;
+
+  &__bg {
+    height: 70dvh;
+    overflow: hidden;
+    display: flex;
+
+    &--1 {
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(255, 255, 255, 0.05) 30%,
+          rgba(255, 255, 255, 0.05) 70%,
+          rgba(0, 0, 0, 1) 100%
+        ),
+        center / cover url('../../img/qr-bg-1.png');
+    }
+
+    &--2 {
+      background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(255, 255, 255, 0.05) 30%,
+          rgba(255, 255, 255, 0.05) 70%,
+          rgba(0, 0, 0, 1) 100%
+        ),
+        center / cover url('../../img/qr-bg-2.png');
+    }
+
+    &--1,
+    &--2 {
+      width: 50%;
+      height: 70dvh;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  &__content {
+    width: 30rem;
+    transform: translateY(-10%);
+  }
+
+  .download {
+    margin-top: 4rem;
+    &__box {
+      display: flex;
+      justify-content: space-between;
+      width: 140%;
+    }
+    &__link {
+      height: 6rem;
+    }
+  }
+
+  .phone {
+    &--high {
+      transform: translateY(-50%);
+    }
+  }
+
+  @media all and (max-width: 56.25em) {
+    &__container {
+      gap: 4rem;
+    }
+    &__bg {
+      &--1,
+      &--2 {
+        width: 100vw;
+        height: 50dvh;
+      }
+      &--1 {
+      }
+      &--2 {
+        order: 2;
+      }
+    }
+
+    &__content {
+      padding: 0 2rem;
+      order: 1;
+      width: 100%;
+    }
+
+    .download {
+      &__box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+    }
+
+    .phone {
+      order: 3;
+      &:nth-of-type(4) {
+        transform: translateY(-50%);
+        // margin-top: -20rem;
+      }
+    }
+  }
+
+  @media all and (max-width: 32em) {
+    .phone {
+      &:nth-of-type(4) {
+        transform: translateY(0);
+        margin-top: -20rem;
+      }
+    }
+  }
+}

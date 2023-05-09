@@ -1,0 +1,40 @@
+.contacts {
+  grid-column: center-start/center-end;
+  display: flex;
+  width: 100%;
+  min-height: 50dvh;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+
+  @include section-gap;
+
+  .contact-box {
+    width: 40%;
+    height: 30rem;
+    border-radius: 2rem;
+    border: solid 1px white;
+    padding: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__desc {
+      margin-bottom: 6rem;
+    }
+
+    &__link {
+      border-bottom: solid 1px white;
+      align-self: start;
+    }
+  }
+
+  @media all and (max-width: 56.25em) {
+    flex-direction: column;
+
+    .contact-box {
+      width: 90vw;
+    }
+  }
+}

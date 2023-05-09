@@ -1,0 +1,41 @@
+.divider {
+  min-height: 80dvh;
+  grid-column: full-start / full-end;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: 'notabnotabnotabnotabnotab\Anotabnotabnotabnotabnotab\Anotabnotabnotabnotabnotab\Anotabnotabnotabnotabnotab\A';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 21rem;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-align: justify;
+    z-index: -1;
+  }
+
+  .phone {
+    height: 50%;
+    width: unset;
+    aspect-ratio: 2/1;
+  }
+
+  background: linear-gradient(
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 1)
+  );
+
+  @media all and (max-width: 56.25em) {
+    display: none;
+  }
+}
